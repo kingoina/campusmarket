@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CampusMarket | Register</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header>
+        <h1>CampusMarket</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="catalog.html">Catalog</a>
+            <a href="register.html">Register</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <h2>Student Registration</h2>
+            <p>Create an account to start buying and selling on campus.</p>
+        </section>
+
+        <section class="register-section">
+            <form id="registerForm" novalidate>
+                <div id="formMessage" class="message-box"></div>
+
+                <div class="form-group">
+                    <label for="fullName">Full Name *</label>
+                    <input type="text" id="fullName" placeholder="Enter your full name">
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Student Email *</label>
+                    <input type="email" id="email" placeholder="student@example.com">
+                </div>
+
+                <div class="form-group">
+                    <label for="password">Password *</label>
+                    <input type="password" id="password" placeholder="Create password">
+                </div>
+
+                <div class="form-group">
+                    <label for="confirmPassword">Confirm Password *</label>
+                    <input type="password" id="confirmPassword" placeholder="Confirm password">
+                </div>
+
+                <div class="form-group checkbox-group">
+                    <input type="checkbox" id="showPasswordToggle">
+                    <label for="showPasswordToggle">Show Passwords</label>
+                </div>
+
+                <button type="submit" class="btn">Register Account</button>
+            </form>
+        </section>
+    </main>
+
+
+    <script src="app.js"></script>
+</body>
+</html>
