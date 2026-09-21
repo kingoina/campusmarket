@@ -147,3 +147,37 @@ nav a:hover {
     margin-bottom: 20px;
 }
 
+/* Filter Box */
+.filter-box {
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.filter-box input, .filter-box select {
+    padding: 8px 12px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+/* Calculation Box inside Cards */
+.calc-box {
+    margin-top: 15px;
+    padding-top: 10px;
+    border-top: 1px solid #eee;
+}
+
+.calc-box input[type="number"] {
+    width: 60px;
+    padding: 5px;
+    margin-left: 5px;
+    font-size: 0.9rem;
+}
+
+.total-price {
+    font-weight: bold;
+    color: #0ea5e9;
+    margin-top: 8px;
+}

@@ -24,45 +24,80 @@
         </section>
 
         <section class="catalog">
+            <!-- Search & Filter Controls -->
+            <div class="filter-box">
+                <input type="text" id="searchInput" placeholder="Search products..." onkeyup="filterProducts()">
+                <select id="categorySelect" onchange="filterProducts()">
+                    <option value="all">All Categories</option>
+                    <option value="books">Books & Supplies</option>
+                    <option value="electronics">Electronics</option>
+                </select>
+            </div>
+
             <div class="product-grid">
 
-                <div class="product-card">
-                    <div class="product-icon"><img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%2Fid%2FOIP.7MLIg-2xpAjHhwY89UXQ2AHaHa%3Fr%3D0%26pid%3DApi&f=1&ipt=5cc27ace4c6b2819ea2940d992801ea6bbbbe883b23dba084efbad4f48830037&ipo=images" ></div>
+                <div class="product-card" data-category="books">
+                    <div class="product-icon">
+                        <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%2Fid%2FOIP.7MLIg-2xpAjHhwY89UXQ2AHaHa%3Fr%3D0%26pid%3DApi&f=1&ipt=5cc27ace4c6b2819ea2940d992801ea6bbbbe883b23dba084efbad4f48830037&ipo=images">
+                    </div>
                     <h3>Academic Textbooks</h3>
                     <p>Used and new textbooks suitable for university courses.</p>
-                    <p class="price">KSh 1,500</p>
-                    <a href="#" class="btn">View Product</a>
+                    <p class="price">KSh <span class="unit-price">1500</span></p>
+                    <div class="calc-box">
+                        <label>Qty:</label>
+                        <input type="number" value="1" min="1" onchange="calculateTotal(this)" onkeyup="calculateTotal(this)">
+                        <p class="total-price">Total: KSh 1500</p>
+                    </div>
                 </div>
 
-                <div class="product-card">
-                    <div class="product-icon"><img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse4.mm.bing.net%2Fth%2Fid%2FOIP.-D6z9Fg5Pam9-WqFjldYrgHaI7%3Fr%3D0%26pid%3DApi&f=1&ipt=24299268a8d2520759481fb4b700fb04263ba95733dbd4d4cced150765b9c4f3&ipo=images"></div>
+                <div class="product-card" data-category="electronics">
+                    <div class="product-icon">
+                        <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse4.mm.bing.net%2Fth%2Fid%2FOIP.-D6z9Fg5Pam9-WqFjldYrgHaI7%3Fr%3D0%26pid%3DApi&f=1&ipt=24299268a8d2520759481fb4b700fb04263ba95733dbd4d4cced150765b9c4f3&ipo=images">
+                    </div>
                     <h3>Laptop Stand</h3>
                     <p>Lightweight and adjustable stand for comfortable studying.</p>
-                    <p class="price">KSh 2,000</p>
-                    <a href="#" class="btn">View Product</a>
+                    <p class="price">KSh <span class="unit-price">2000</span></p>
+                    <div class="calc-box">
+                        <label>Qty:</label>
+                        <input type="number" value="1" min="1" onchange="calculateTotal(this)" onkeyup="calculateTotal(this)">
+                        <p class="total-price">Total: KSh 2000</p>
+                    </div>
                 </div>
 
-                <div class="product-card">
-                    <div class="product-icon"><img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse4.mm.bing.net%2Fth%2Fid%2FOIP.KInMuXAO_w7yhzTHsbnhCwHaHa%3Fr%3D0%26pid%3DApi&f=1&ipt=594729e55f9a1203c3c040a1bbcd0e5855add4f918af4efaf7944a7484ce3a93&ipo=images"></div>
+                <div class="product-card" data-category="electronics">
+                    <div class="product-icon">
+                        <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse4.mm.bing.net%2Fth%2Fid%2FOIP.KInMuXAO_w7yhzTHsbnhCwHaHa%3Fr%3D0%26pid%3DApi&f=1&ipt=594729e55f9a1203c3c040a1bbcd0e5855add4f918af4efaf7944a7484ce3a93&ipo=images">
+                    </div>
                     <h3>Wireless Headphones</h3>
                     <p>Comfortable wireless headphones for studying and music.</p>
-                    <p class="price">KSh 2,500</p>
-                    <a href="#" class="btn">View Product</a>
+                    <p class="price">KSh <span class="unit-price">2500</span></p>
+                    <div class="calc-box">
+                        <label>Qty:</label>
+                        <input type="number" value="1" min="1" onchange="calculateTotal(this)" onkeyup="calculateTotal(this)">
+                        <p class="total-price">Total: KSh 2500</p>
+                    </div>
                 </div>
 
-                <div class="product-card">
-                    <div class="product-icon"><img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse4.explicit.bing.net%2Fth%2Fid%2FOIP.xh8sabSU6hOkNQbO8zGN6wHaJN%3Fr%3D0%26pid%3DApi&f=1&ipt=595f093e6e5f7dea107c3721170282805e132404b4226a993d69b949edb36b71&ipo=images" ></div>
+                <div class="product-card" data-category="books">
+                    <div class="product-icon">
+                        <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse4.explicit.bing.net%2Fth%2Fid%2FOIP.xh8sabSU6hOkNQbO8zGN6wHaJN%3Fr%3D0%26pid%3DApi&f=1&ipt=595f093e6e5f7dea107c3721170282805e132404b4226a993d69b949edb36b71&ipo=images">
+                    </div>
                     <h3>Campus Backpack</h3>
                     <p>Durable backpack with space for books and a laptop.</p>
-                    <p class="price">KSh 1,800</p>
-                    <a href="#" class="btn">View Product</a>
+                    <p class="price">KSh <span class="unit-price">1800</span></p>
+                    <div class="calc-box">
+                        <label>Qty:</label>
+                        <input type="number" value="1" min="1" onchange="calculateTotal(this)" onkeyup="calculateTotal(this)">
+                        <p class="total-price">Total: KSh 1800</p>
+                    </div>
                 </div>
-
 
             </div>
         </section>
     </main>
 
   
+
+    <script src="app.js"></script>
 </body>
 </html>
