@@ -24,9 +24,9 @@
         </section>
 
         <section class="register-section">
-            <form id="registerForm" novalidate>
-                <div id="formMessage" class="message-box"></div>
+            <div id="formMessage" class="message-box"></div>
 
+            <form id="registerForm" novalidate>
                 <div class="form-group">
                     <label for="fullName">Full Name *</label>
                     <input type="text" id="fullName" placeholder="Enter your full name">
@@ -52,11 +52,14 @@
                     <label for="showPasswordToggle">Show Passwords</label>
                 </div>
 
-                <button type="submit" class="btn">Register Account</button>
+                <button type="submit" id="submitBtn" class="btn">Register Account</button>
             </form>
         </section>
     </main>
 
+    <footer>
+        <p>&copy; 2026 CampusMarket</p>
+    </footer>
 
     <script src="app.js"></script>
 </body>

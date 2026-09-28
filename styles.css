@@ -244,3 +244,163 @@ nav a:hover {
     color: #16a34a;
     border: 1px solid #86efac;
 }
+
+
+button.btn {
+    border: none;
+    cursor: pointer;
+}
+
+
+.calc-box input.invalid-input {
+    border-color: #dc2626;
+    background-color: #fee2e2;
+}
+
+
+.message-box {
+    opacity: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: opacity 0.4s ease, max-height 0.4s ease, margin-bottom 0.4s ease, padding 0.4s ease;
+    padding: 0 10px;
+}
+
+.message-box.visible {
+    display: block;
+    opacity: 1;
+    max-height: 120px;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+
+@keyframes successPulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.03); box-shadow: 0 0 15px rgba(22, 163, 74, 0.4); }
+    100% { transform: scale(1); }
+}
+
+.animated-success {
+    animation: successPulse 0.6s ease-in-out standard;
+}
+
+
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(15, 23, 42, 0.75);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal-overlay.hidden {
+    display: none;
+}
+
+.modal-content {
+    background: #ffffff;
+    padding: 24px;
+    border-radius: 8px;
+    max-width: 500px;
+    width: 90%;
+    position: relative;
+    text-align: center;
+}
+
+.modal-close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    background: none;
+    border: none;
+    font-size: 1.8rem;
+    cursor: pointer;
+    color: #64748b;
+}
+
+.slideshow-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 15px 0;
+    gap: 10px;
+}
+
+.slide-view {
+    flex: 1;
+}
+
+.slide-view img {
+    width: 100%;
+    height: 220px;
+    object-fit: contain;
+    border-radius: 6px;
+    background-color: #f8fafc;
+}
+
+.slide-caption {
+    margin-top: 8px;
+    font-weight: bold;
+    color: #333;
+}
+
+.nav-btn {
+    background: #e2e8f0;
+    border: 1px solid #ccc;
+    border-radius: 50%;
+    width: 36px;
+    height: 36px;
+    cursor: pointer;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav-btn:hover {
+    background: #cbd5e1;
+}
+
+.slide-counter {
+    font-size: 0.85rem;
+    color: #666;
+}
+
+
+@media (max-width: 1040px) {
+    .features, .catalog {
+        width: 90%;
+    }
+}
+
+@media (max-width: 650px) {
+    header {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    nav a {
+        margin: 0 10px;
+    }
+
+    .filter-box {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .product-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .product-card {
+        width: 100%;
+        max-width: 320px;
+    }
+}
